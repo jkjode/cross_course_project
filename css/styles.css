@@ -1,0 +1,785 @@
+/*Content
+Global Styling - 20
+Fonts - 22 
+Header - 46
+Navigation - 108 
+Index image - 152 
+Footer - 203
+Browser styling - 224
+Mobile styling - 247
+Hamburger menu - 298
+Jackets page - 351
+Jacket specific - 415
+Jacket checkout - 508
+Checkout Jacket mobile - 554
+Contact - 589
+Contact Mobile - 676
+About page - 679
+*/
+
+/*Global styling*/
+
+@font-face {
+    font-family: Bebas Neue;
+    src: url(/fonts/Bebas\ Neue/) format("truetype");
+    font-family: Gentium;
+    src: url(/fonts/Gentium/GentiumBasic-Regular.ttf) format("truetype");
+}
+
+body {
+    display: grid;
+    grid-gap: .2em;
+    grid-template-areas: 
+    'header header header' 
+    'nav nav nav' 
+    'main main main' 
+    'footer footer footer';
+    grid-template-rows: auto;
+    
+}
+
+header {grid-area: header;}
+nav {grid-area: nav;}
+main {grid-area: main;}
+footer {grid-area: footer;}
+
+header {
+    background: url(/images/rainydays_logo.png);
+    background-repeat: no-repeat;
+    background-color: #3F402D;
+    background-position-x: center;
+    background-position-y: center;
+    border-radius: 20px 20px 0px 0px;
+    padding-top: 10px;
+    text-align: center;
+    height: 190px;
+    display: block;
+    position: center;
+    width: 89vw;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+#headerContent {
+    margin: 0 auto; 
+    width: 50%;
+}
+
+.logo, .border {
+    left: 50%;
+    top: 50%;
+}
+
+.logo {
+    margin: 0 auto;
+}
+
+.rainydays {
+    display: block;
+    justify-content: center;
+    z-index: 2;
+    width: 90vw;
+    height: 190px;
+}
+
+.border {
+    display: block;
+    justify-content: center;
+}
+ 
+body {
+    
+    background-color: #D9D9D9;
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+.logo {
+    display: inline-block;
+    size: 99%;    
+    align-items: center;
+}
+
+.border {
+    margin-left: 25%;
+    margin-top: 10px;
+}
+
+
+
+/*navigation*/
+nav { 
+    height: 60px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+ul {
+    height: 80px;
+    margin-top: 1em;
+    padding-top: 7px;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+
+.menu, .menu1, .current {
+    font-family: Bebas Neue;
+    font-size: 1.2em;
+    background-color: #F2F2F2;
+    color: #3F402D;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 10px;
+    margin-top: 1em;
+    width: 5%;
+    padding: .2%;
+    padding-left: 3%;
+    padding-right: 3%;
+    border: solid #3F402D 2px;
+    }
+
+.menu, .menu1 {
+    margin-left: 3%;
+    margin-right: 3%;
+    }
+
+.current {
+    background-color: #3F402D;
+    color: #F2F2F2;
+    border: solid #3F402D 1px;
+    }
+
+
+/*index image*/
+
+.browser {
+    width: 90vw;
+    z-index: 1;
+    position: absolute;
+    }
+
+main {
+    display: block;
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 100vw;
+    height: 81vh;
+    z-index: 1;
+    overflow-x: hidden;
+    }
+
+.hometext {
+    font-family: Bebas Neue;
+    font-size: 4rem;
+    color: #F2F2F2;
+    text-shadow: 2px 2px #3F402D;
+    z-index: 9;
+    position: absolute;
+    background-size: contain;
+    left: 50%;
+    transform: translate(-50%);
+    }
+
+.cta {
+    font-family: Bebas Neue;
+    text-decoration: none;
+    font-size: 2rem;
+    text-align: center;
+    color: #F2F2F2;
+    background-color: #850000F5;
+    border-radius: 25px;
+    width: 200px;
+    height: 50px;
+    padding-top: 10px;
+    padding: 8px 10px 5px 10px;
+    z-index: 8;
+    position: relative;
+    top: 12em;
+    left: 50%;
+    transform: translate(-50%);
+    }
+
+
+
+/*Footer*/
+footer {
+    background-color: #3F402D;
+    font-family: Gentium;
+    color: #F2F2F2;
+    text-align: center;
+    height: 25px;
+    padding-top: 10px;
+    margin-top: 40px;
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 89vw;
+    }
+
+.footermenu {
+    text-decoration: none;
+    color: #F2F2F2;
+    margin-left: 50px;
+    }
+
+
+/*Browser styling*/
+@media (min-width:601px) {
+
+    .index {
+        background: url(/images/yellowjacketbeach.png);
+        background-repeat: no-repeat;
+        width: 89vw;
+        left: 50%;
+        right: 50%;
+        margin-left: 5%;
+        margin-right: 5%;
+        }
+
+   .hamburger {
+        display: none;
+        }
+    
+   .m_hometext {
+        display: none;
+        }
+    }
+
+
+/*Mobile styling*/
+
+@media  (max-width:600px) {
+
+    .index { 
+        background: url(/images/m_yellowjacketbeach1.png);
+        background-repeat: no-repeat;
+        width: 89vw;
+        margin-left: 5%;
+        margin-right: 5%;
+        }
+    
+   .browser-nav {
+        display: none;
+        }
+
+ 
+   .cta {
+        font-family: Bebas Neue;
+        text-decoration: none;
+        font-size: 2rem;
+        text-align: center;
+        color: #F2F2F2;
+        background-color: #850000F5;
+        border-radius: 25px;
+        width: 200px;
+        height: 50px;
+        padding: 15px 8px 5px 8px;
+        z-index: 8;
+        position: absolute;
+        top: 17em;
+        left: 50%;
+        transform: translate(-50%);
+        }
+
+   .hometext {
+        display: none;
+        }
+
+    .m_hometext {
+        font-family: Bebas Neue;
+        color: #F2F2F2;
+        text-shadow: 2px 2px #3F402D;
+        font-size: 2.5em;
+        top: 4.5em;
+        text-align: center;
+        z-index: 2;
+        }
+
+
+
+/*hamburger menu*/
+    
+    .mobile-menu { 
+        display: none;
+        background-color: #F2F2F2;
+        font-size: 2em;
+        width: 6em;
+        height: 7em;
+        text-decoration: none;
+        padding-top: 5px;
+        padding-right: 30px;
+        padding-bottom: 10px;
+        overflow-y: hidden;
+        position: absolute;
+        z-index: 999;
+        }
+
+    a {
+        text-decoration: none;
+        color: #3F402D;
+        }
+
+    .mobile-menu-content {
+        height: 7em;
+        text-decoration: none;
+        color: #3F402D;
+        display: block;
+        z-index: 999;    
+        }
+
+    #hamburger-menu{
+        display:none;
+        } 
+
+    #hamburger-menu:checked ~ nav {
+        display: block;
+        }
+
+
+    .hamburger {
+        background-color: #D9D9D9;
+        width: 2em;
+        color: #3F402D;
+        padding-left: 5px;
+        z-index: 20;
+        margin-left: 1.7em;
+        }
+   
+}
+
+/*end of hamburger menu*/
+
+
+/*JACKETS*/
+
+#product-section {
+    width: 89vw;
+    height: 900px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    /* grid-row-gap: 120px; */
+    justify-items: center;
+    align-items: center;
+    }
+
+.jackets-display {
+    background-color: #F2F2F2;
+    align-self: start;
+    justify-self: center;
+    align-content: center;
+    justify-content: center;
+    width: 20vw;
+    height: 50vh;
+    z-index: 5;
+    padding-bottom: 3vh;
+    }
+
+.jacket-name {
+    font-family: Bebas Neue;
+    font-size: smaller;
+    width: 15vw;
+    height: 8vh;
+    padding: 0vh 0vh 2vh 3vh;
+    margin-left: -1vw;
+    border-radius: 2%;
+    }
+
+.jacket-price {
+    font-family: Gentium;
+    font-size: xx-large;
+    margin-top: 5vh;
+    }
+
+.jacket-images {
+    width: 200px;
+    /* height: 0; */
+    align-content: center;
+    justify-content: center;
+    z-index: 1;
+    margin-top: 2vh;
+    margin-left: 2.5vh;
+    object-fit: cover;
+    }
+
+@media (max-width:650px) {
+    .product-section {
+        grid-template-columns: 1fr;
+        height: auto;
+        }
+
+    .nametag {
+        width: 50vw;
+        margin-top: 3vh;
+        margin-left: -2vh;
+        }
+}
+
+/* JACKET SPECIFIC */
+
+.jacket-display {
+    margin-top: 5vh;
+    width: 89vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    }
+    
+
+.jacketbox {
+    background-color: #F2F2F2;
+    margin-top: 11vh;
+    margin-left: 10vw;
+    padding: 5%;
+    width: 27vw;
+    height: fit-content;     
+    align-content: center;
+    }
+
+
+.jacket-image-specific {
+    margin-top: 2vh;
+    width: 27vw;
+    }
+
+.jacket-name-specific {
+    width: 35vw;
+    color: #3F402D;
+    margin-left: 5vw;
+    }
+
+.buynow {
+    font-family: Bebas Neue;
+    font-size: x-large ;
+    width: 10vw;
+    height: 3vh;
+    border-radius: 5%;
+    background-color: #F2F2F2;
+    color: #3F402D;
+    border: 2px solid #3F402D;
+    margin-top: 8vh;
+    margin-left: 10vh;
+    }
+ 
+.backbutton {
+    font-family: Bebas Neue;
+    align-self: right;
+    color: #3F402D;
+    }
+
+@media (max-width:700px) {
+    
+    .jacket-specific {
+        display: grid;
+        grid-template-columns: 1fr;
+        height: auto;
+        }
+
+    .jacketbox {
+        width: 65vw;
+        height: auto;
+        margin-top: 1vh;
+        }
+
+    .jacket1, .jacket2, .jacket3, .jacket4, .jacket5, .jacket6 {
+        width: 65vw;
+        }
+
+    .jackettxt {
+        width: auto;
+        height: fit-content;
+        }
+
+    .buynow {
+        font-family: Bebas Neue;
+        font-size: x-large;
+        width: 30vw;
+        height: 5vh;
+        margin-top: 3vh;
+        margin-left: 25vw;
+        }
+
+    .backbutton {
+        margin-top: 3vh;
+        }
+}
+
+/*JACKET CHECKOUT*/
+
+.jacket-checkout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    }
+
+.checkoutform {
+    display: grid, 1fr;
+    margin-top: 6vw;
+    width: 20vw;
+    }
+
+.jacketcheckout {
+    background-color: #F2F2F2;
+    margin-top: 11vh;
+    margin-left: 15vw;
+    padding: 5%;
+    width: 15vw;
+    height: fit-content;     
+    align-content: center;
+    }
+
+
+.jacketbuy {
+    margin-top: 2vh;
+    width: 15vw;
+    }
+
+.checklayout {
+    width: 35vw;
+    margin-left: -15vw;
+    }
+
+.checktxt {
+    width: 35vw;
+    color: #3F402D;
+    margin-left: -1.5vw;
+    }
+
+/*Checkout Jacket mobile*/
+
+@media (max-width:700px) {
+
+    .jacket-checkout {
+        display: grid;
+        grid-template-columns: 1fr;
+        }
+
+    .jacketcheckout {
+        width: 35vw;
+        margin-left: 24vw;
+        margin-top: 5vh;
+        }
+
+    .jacketbuy {
+        width: 34vw;
+        }    
+
+    .checktxt {
+        width: 80vw;
+        margin-left: 5vw;
+        }
+
+    .checklayout {
+        width: 35vw;
+        margin-left: -5vw;
+        }
+
+}
+
+/* End of Checkout */
+
+/*CONTACT*/
+
+.contactlayout {
+    width: 89vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    }
+
+h1 {
+    font-family: Bebas Neue;
+    font-size: 2.25em;
+    color: #3F402D;
+    }
+
+h2 {
+    font-family: Bebas Neue;
+    margin-top: 1vw;
+    padding-bottom: 3vh;
+    font-size: 1.75em;
+    color: #3F402D;
+    }
+
+p { 
+    font-size: Bebas Neue;
+    font-size: large;
+    text-align: left;
+    }
+    
+
+.paragraphtext {
+    font-family: Gentium;
+    font-size: 1.25em;
+    margin-top: 1vw;
+    text-align: left;
+    display: grid 1fr;
+    color: #3F402D;
+    }
+
+.contactinfo {
+    font-style: Gentium;
+    width: 40vw;
+    margin-left: 5vw;
+    margin-top: 2vh;
+    color: #3F402D;
+    float: right;
+    }
+
+.contactform {
+    display: grid, 1fr;
+    margin-top: 6vw;
+    width: 35vw;
+    }
+
+input[type=text], select, textarea {
+    width: 25vw; 
+    padding: 12px; 
+    border: 2px solid #8C7F65; 
+    border-radius: 4px; 
+    box-sizing: border-box; 
+    margin-top: 6px; 
+    margin-left: 15vw;
+    margin-bottom: 16px; 
+    resize: vertical; 
+    display: grid;
+    }
+   
+input[type=submit] {
+    background-color: #F2F2F2;
+    color: #3F402D;
+    padding: 12px 20px;
+    border: 2px solid #3F402D;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: Bebas Neue;
+    font-size: 1.25em;
+    margin-left: 15vw;
+    }
+  
+  /* Submit on hover */
+  input[type=submit]:hover {
+    background-color: #3F402D;
+    color: #F2F2F2;
+    }
+  
+  .container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    }
+
+/* Contact mobile */
+
+@media (max-width:650px){
+    .contactlayout {
+        display: grid;
+        grid-template-columns: 1fr;
+        }
+
+    .contactform {
+        width: 85vw;
+        }
+
+    input[type=text], select, textarea {
+        width: 60vw;
+        }
+
+    .contactinfo {
+        width: 80vw;
+        }
+}
+
+/* End of Contact */
+
+/* ABOUT */
+
+.sectionabout {
+    width: 89vw;
+    height: 80vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    }
+
+.waterfall {
+    width: 29vw;
+    float: left;
+    margin-top: 12vh;
+    margin-left: 10vw;
+    }
+
+.abouttxt {
+    font-style: Gentium;
+    width: 40vw;
+    color: #3F402D;
+    float: right;
+    margin-left: 5vw;
+    margin-top: 2vh;
+    }
+
+@media (max-width:600px) {
+    .waterfall {
+        width: 60vw;
+        margin-top: 3vh;
+        margin-left: 15vw;
+        align-content: space-around;
+        }
+    
+    .sectionabout {
+        grid-template-columns: 1fr;
+        width: 80vw;
+        }
+
+    .abouttxt {
+        width: 80vw;
+        }
+}
+
+/* End of About */
+
+/* Contact form */
+* {
+    box-sizing: border-box;
+}
+
+.button, a {
+    color: white;
+    margin-right: 1rem;
+    text-decoration: none;
+}
+
+.container {
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+#subject {
+    height: 10rem;
+}
+
+input {
+    width: 100%;
+    margin-top: 2px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+button, .button {
+    background: #3F402D;
+    border: none;
+    width: 200px;
+    padding: 1rem;
+    color: white;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 0.2rem;
+}
+
+label {
+    display: block;
+    margin-top: 1rem;
+}
+
+.form-error {
+    display: none;
+    color: red;
+    font-size: 0.9rem;
+    margin-top: 2px;
+}
